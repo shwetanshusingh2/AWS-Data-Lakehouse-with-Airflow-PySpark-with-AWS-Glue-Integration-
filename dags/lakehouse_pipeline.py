@@ -13,7 +13,7 @@ def create_dag():
 
         extract = BashOperator(
             task_id="extract_data",
-            bash_command="aws s3 cp s3://my-raw-bucket/data.csv s3://aws-glue-temp-bucket/input/data.csv"
+            bash_command="aws s3 cp s3://my-shw-test-bucket123/data.csv s3://aws-glue-temp-bucket/input/data.csv"
         )
 
         transform = AwsGlueJobOperator(
